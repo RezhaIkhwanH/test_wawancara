@@ -49,18 +49,7 @@ flowchart LR
 
 ---
 
-## ⚖️ Evaluasi Resmi dengan `mlflow.genai.evaluate()`
-
-Sistem menggunakan fitur evaluasi resmi MLflow GenAI (`mlflow.genai.evaluate`) dengan tiga juri spesifik:
-
-```python
-with mlflow.start_run(run_name=run_name):
-    result = mlflow.genai.evaluate(
-        data=EVAL_SCENARIOS,
-        predict_fn=predict_fn,
-        scorers=[juri_rute, juri_tool, juri_relevancy],
-    )
-```
+## ⚖️ Evaluasi
 
 ### 👨‍⚖️ Panel Juri Evaluasi:
 1. **`juri_rute` (Trace Route Judge):**
